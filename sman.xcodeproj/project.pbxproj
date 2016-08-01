@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DB2F2DFE1D29FEF100D4C028 /* SMANRoster.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F2DFD1D29FEF100D4C028 /* SMANRoster.m */; };
+		DB2F2E0B1D2A0CDA00D4C028 /* SMANJob.m in Sources */ = {isa = PBXBuildFile; fileRef = DB2F2E0A1D2A0CDA00D4C028 /* SMANJob.m */; };
+		DB48E92D1D2AEFDB006AEF95 /* SMANViewLogsSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB48E92C1D2AEFDB006AEF95 /* SMANViewLogsSheetViewController.m */; };
+		DB4CC0951D2A3CF200C8B730 /* SMANCreateJobSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4CC0941D2A3CF200C8B730 /* SMANCreateJobSheetViewController.m */; };
+		DB5FFC6C1D29D65B00CF58D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5FFC6B1D29D65B00CF58D8 /* AppDelegate.m */; };
+		DB5FFC6F1D29D65B00CF58D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5FFC6E1D29D65B00CF58D8 /* main.m */; };
+		DB5FFC721D29D65B00CF58D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5FFC711D29D65B00CF58D8 /* ViewController.m */; };
+		DB5FFC741D29D65B00CF58D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5FFC731D29D65B00CF58D8 /* Assets.xcassets */; };
+		DB5FFC771D29D65B00CF58D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5FFC751D29D65B00CF58D8 /* Main.storyboard */; };
+		DB5FFC821D29D65B00CF58D8 /* smanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5FFC811D29D65B00CF58D8 /* smanTests.m */; };
+		DB5FFC8D1D29D65B00CF58D8 /* smanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5FFC8C1D29D65B00CF58D8 /* smanUITests.m */; };
+		DB96F3461D39E58300731513 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DB96F3451D39E58300731513 /* Credits.rtf */; };
+		DBE50CA11D306CB1006804E4 /* wildmatch.c in Sources */ = {isa = PBXBuildFile; fileRef = DBE50C9F1D306CB1006804E4 /* wildmatch.c */; };
+		DBE50CA51D32CE07006804E4 /* SMANJobTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE50CA41D32CE07006804E4 /* SMANJobTests.m */; };
+		DBE50CB11D337747006804E4 /* SMANWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE50CB01D337747006804E4 /* SMANWindowController.m */; };
+		DBEAB1641D2B638B00F6150C /* SMANPreferencesSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEAB1631D2B638B00F6150C /* SMANPreferencesSheetViewController.m */; };
+		DBEAB16C1D2E1CEF00F6150C /* SMANMultilineTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEAB16B1D2E1CEF00F6150C /* SMANMultilineTextFieldDelegate.m */; };
+		DBEAB16F1D2E1E0400F6150C /* SMANArrayToStringValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEAB16E1D2E1E0400F6150C /* SMANArrayToStringValueTransformer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DB5FFC7E1D29D65B00CF58D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB5FFC5F1D29D65B00CF58D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB5FFC661D29D65B00CF58D8;
+			remoteInfo = sman;
+		};
+		DB5FFC891D29D65B00CF58D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB5FFC5F1D29D65B00CF58D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB5FFC661D29D65B00CF58D8;
+			remoteInfo = sman;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DB1632451D4D875100E2E4E4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		DB2F2DFC1D29FEF100D4C028 /* SMANRoster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMANRoster.h; sourceTree = "<group>"; };
+		DB2F2DFD1D29FEF100D4C028 /* SMANRoster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMANRoster.m; sourceTree = "<group>"; };
+		DB2F2E091D2A0CDA00D4C028 /* SMANJob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMANJob.h; sourceTree = "<group>"; };
+		DB2F2E0A1D2A0CDA00D4C028 /* SMANJob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMANJob.m; sourceTree = "<group>"; };
+		DB48E92B1D2AEFDB006AEF95 /* SMANViewLogsSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMANViewLogsSheetViewController.h; sourceTree = "<group>"; };
+		DB48E92C1D2AEFDB006AEF95 /* SMANViewLogsSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMANViewLogsSheetViewController.m; sourceTree = "<group>"; };
+		DB4CC0931D2A3CF200C8B730 /* SMANCreateJobSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMANCreateJobSheetViewController.h; sourceTree = "<group>"; };
+		DB4CC0941D2A3CF200C8B730 /* SMANCreateJobSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMANCreateJobSheetViewController.m; sourceTree = "<group>"; };
+		DB4CC0961D2AD74500C8B730 /* SMANCreateJobSheetViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMANCreateJobSheetViewControllerDelegate.h; sourceTree = "<group>"; };
+		DB5FFC671D29D65B00CF58D8 /* Super Mega Awesome NYAN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Super Mega Awesome NYAN.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB5FFC6A1D29D65B00CF58D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DB5FFC6B1D29D65B00CF58D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DB5FFC6E1D29D65B00CF58D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DB5FFC701D29D65B00CF58D8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DB5FFC711D29D65B00CF58D8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DB5FFC731D29D65B00CF58D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DB5FFC761D29D65B00CF58D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DB5FFC781D29D65B00CF58D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB5FFC7D1D29D65B00CF58D8 /* smanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB5FFC811D29D65B00CF58D8 /* smanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = smanTests.m; sourceTree = "<group>"; };
+		DB5FFC831D29D65B00CF58D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB5FFC881D29D65B00CF58D8 /* smanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB5FFC8C1D29D65B00CF58D8 /* smanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = smanUITests.m; sourceTree = "<group>"; };
+		DB5FFC8E1D29D65B00CF58D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB96F3451D39E58300731513 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		DBE50C9F1D306CB1006804E4 /* wildmatch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = wildmatch.c; path = lib/wildmatch.c; sourceTree = "<group>"; };
+		DBE50CA01D306CB1006804E4 /* wildmatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = wildmatch.h; path = lib/wildmatch.h; sourceTree = "<group>"; };
+		DBE50CA41D32CE07006804E4 /* SMANJobTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMANJobTests.m; sourceTree = "<group>"; };
+		DBE50CAF1D337747006804E4 /* SMANWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMANWindowController.h; sourceTree = "<group>"; };
+		DBE50CB01D337747006804E4 /* SMANWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMANWindowController.m; sourceTree = "<group>"; };
+		DBEAB1621D2B638B00F6150C /* SMANPreferencesSheetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMANPreferencesSheetViewController.h; sourceTree = "<group>"; };
+		DBEAB1631D2B638B00F6150C /* SMANPreferencesSheetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMANPreferencesSheetViewController.m; sourceTree = "<group>"; };
+		DBEAB1661D2C44F200F6150C /* SMANViewLogsSheetViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMANViewLogsSheetViewControllerDelegate.h; sourceTree = "<group>"; };
+		DBEAB16A1D2E1CEF00F6150C /* SMANMultilineTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMANMultilineTextFieldDelegate.h; sourceTree = "<group>"; };
+		DBEAB16B1D2E1CEF00F6150C /* SMANMultilineTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMANMultilineTextFieldDelegate.m; sourceTree = "<group>"; };
+		DBEAB16D1D2E1E0400F6150C /* SMANArrayToStringValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMANArrayToStringValueTransformer.h; sourceTree = "<group>"; };
+		DBEAB16E1D2E1E0400F6150C /* SMANArrayToStringValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMANArrayToStringValueTransformer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DB5FFC641D29D65B00CF58D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB5FFC7A1D29D65B00CF58D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB5FFC851D29D65B00CF58D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DB5FFC5E1D29D65B00CF58D8 = {
+			isa = PBXGroup;
+			children = (
+				DB1632451D4D875100E2E4E4 /* .gitignore */,
+				DB5FFC691D29D65B00CF58D8 /* sman */,
+				DB5FFC801D29D65B00CF58D8 /* smanTests */,
+				DB5FFC8B1D29D65B00CF58D8 /* smanUITests */,
+				DB5FFC681D29D65B00CF58D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DB5FFC681D29D65B00CF58D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DB5FFC671D29D65B00CF58D8 /* Super Mega Awesome NYAN.app */,
+				DB5FFC7D1D29D65B00CF58D8 /* smanTests.xctest */,
+				DB5FFC881D29D65B00CF58D8 /* smanUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DB5FFC691D29D65B00CF58D8 /* sman */ = {
+			isa = PBXGroup;
+			children = (
+				DB5FFC6A1D29D65B00CF58D8 /* AppDelegate.h */,
+				DB5FFC6B1D29D65B00CF58D8 /* AppDelegate.m */,
+				DB5FFC731D29D65B00CF58D8 /* Assets.xcassets */,
+				DB5FFC781D29D65B00CF58D8 /* Info.plist */,
+				DBE50C9E1D306C8C006804E4 /* lib */,
+				DB5FFC751D29D65B00CF58D8 /* Main.storyboard */,
+				DBEAB16D1D2E1E0400F6150C /* SMANArrayToStringValueTransformer.h */,
+				DBEAB16E1D2E1E0400F6150C /* SMANArrayToStringValueTransformer.m */,
+				DB4CC0931D2A3CF200C8B730 /* SMANCreateJobSheetViewController.h */,
+				DB4CC0941D2A3CF200C8B730 /* SMANCreateJobSheetViewController.m */,
+				DB4CC0961D2AD74500C8B730 /* SMANCreateJobSheetViewControllerDelegate.h */,
+				DB2F2E091D2A0CDA00D4C028 /* SMANJob.h */,
+				DB2F2E0A1D2A0CDA00D4C028 /* SMANJob.m */,
+				DBEAB16A1D2E1CEF00F6150C /* SMANMultilineTextFieldDelegate.h */,
+				DBEAB16B1D2E1CEF00F6150C /* SMANMultilineTextFieldDelegate.m */,
+				DBEAB1621D2B638B00F6150C /* SMANPreferencesSheetViewController.h */,
+				DBEAB1631D2B638B00F6150C /* SMANPreferencesSheetViewController.m */,
+				DB2F2DFC1D29FEF100D4C028 /* SMANRoster.h */,
+				DB2F2DFD1D29FEF100D4C028 /* SMANRoster.m */,
+				DB48E92B1D2AEFDB006AEF95 /* SMANViewLogsSheetViewController.h */,
+				DB48E92C1D2AEFDB006AEF95 /* SMANViewLogsSheetViewController.m */,
+				DBEAB1661D2C44F200F6150C /* SMANViewLogsSheetViewControllerDelegate.h */,
+				DBE50CAF1D337747006804E4 /* SMANWindowController.h */,
+				DBE50CB01D337747006804E4 /* SMANWindowController.m */,
+				DB5FFC6D1D29D65B00CF58D8 /* Supporting Files */,
+				DB5FFC701D29D65B00CF58D8 /* ViewController.h */,
+				DB5FFC711D29D65B00CF58D8 /* ViewController.m */,
+			);
+			path = sman;
+			sourceTree = "<group>";
+		};
+		DB5FFC6D1D29D65B00CF58D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DB5FFC6E1D29D65B00CF58D8 /* main.m */,
+				DB96F3451D39E58300731513 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DB5FFC801D29D65B00CF58D8 /* smanTests */ = {
+			isa = PBXGroup;
+			children = (
+				DB5FFC811D29D65B00CF58D8 /* smanTests.m */,
+				DBE50CA41D32CE07006804E4 /* SMANJobTests.m */,
+				DB5FFC831D29D65B00CF58D8 /* Info.plist */,
+			);
+			path = smanTests;
+			sourceTree = "<group>";
+		};
+		DB5FFC8B1D29D65B00CF58D8 /* smanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DB5FFC8C1D29D65B00CF58D8 /* smanUITests.m */,
+				DB5FFC8E1D29D65B00CF58D8 /* Info.plist */,
+			);
+			path = smanUITests;
+			sourceTree = "<group>";
+		};
+		DBE50C9E1D306C8C006804E4 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				DBE50C9F1D306CB1006804E4 /* wildmatch.c */,
+				DBE50CA01D306CB1006804E4 /* wildmatch.h */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DB5FFC661D29D65B00CF58D8 /* sman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB5FFC911D29D65B00CF58D8 /* Build configuration list for PBXNativeTarget "sman" */;
+			buildPhases = (
+				DB5FFC631D29D65B00CF58D8 /* Sources */,
+				DB5FFC641D29D65B00CF58D8 /* Frameworks */,
+				DB5FFC651D29D65B00CF58D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sman;
+			productName = sman;
+			productReference = DB5FFC671D29D65B00CF58D8 /* Super Mega Awesome NYAN.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DB5FFC7C1D29D65B00CF58D8 /* smanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB5FFC941D29D65B00CF58D8 /* Build configuration list for PBXNativeTarget "smanTests" */;
+			buildPhases = (
+				DB5FFC791D29D65B00CF58D8 /* Sources */,
+				DB5FFC7A1D29D65B00CF58D8 /* Frameworks */,
+				DB5FFC7B1D29D65B00CF58D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB5FFC7F1D29D65B00CF58D8 /* PBXTargetDependency */,
+			);
+			name = smanTests;
+			productName = smanTests;
+			productReference = DB5FFC7D1D29D65B00CF58D8 /* smanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DB5FFC871D29D65B00CF58D8 /* smanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB5FFC971D29D65B00CF58D8 /* Build configuration list for PBXNativeTarget "smanUITests" */;
+			buildPhases = (
+				DB5FFC841D29D65B00CF58D8 /* Sources */,
+				DB5FFC851D29D65B00CF58D8 /* Frameworks */,
+				DB5FFC861D29D65B00CF58D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB5FFC8A1D29D65B00CF58D8 /* PBXTargetDependency */,
+			);
+			name = smanUITests;
+			productName = smanUITests;
+			productReference = DB5FFC881D29D65B00CF58D8 /* smanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DB5FFC5F1D29D65B00CF58D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Roger Chen";
+				TargetAttributes = {
+					DB5FFC661D29D65B00CF58D8 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					DB5FFC7C1D29D65B00CF58D8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DB5FFC661D29D65B00CF58D8;
+					};
+					DB5FFC871D29D65B00CF58D8 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DB5FFC661D29D65B00CF58D8;
+					};
+				};
+			};
+			buildConfigurationList = DB5FFC621D29D65B00CF58D8 /* Build configuration list for PBXProject "sman" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DB5FFC5E1D29D65B00CF58D8;
+			productRefGroup = DB5FFC681D29D65B00CF58D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DB5FFC661D29D65B00CF58D8 /* sman */,
+				DB5FFC7C1D29D65B00CF58D8 /* smanTests */,
+				DB5FFC871D29D65B00CF58D8 /* smanUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DB5FFC651D29D65B00CF58D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB5FFC741D29D65B00CF58D8 /* Assets.xcassets in Resources */,
+				DB96F3461D39E58300731513 /* Credits.rtf in Resources */,
+				DB5FFC771D29D65B00CF58D8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB5FFC7B1D29D65B00CF58D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB5FFC861D29D65B00CF58D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DB5FFC631D29D65B00CF58D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBEAB1641D2B638B00F6150C /* SMANPreferencesSheetViewController.m in Sources */,
+				DB5FFC721D29D65B00CF58D8 /* ViewController.m in Sources */,
+				DBE50CB11D337747006804E4 /* SMANWindowController.m in Sources */,
+				DBEAB16C1D2E1CEF00F6150C /* SMANMultilineTextFieldDelegate.m in Sources */,
+				DBEAB16F1D2E1E0400F6150C /* SMANArrayToStringValueTransformer.m in Sources */,
+				DB4CC0951D2A3CF200C8B730 /* SMANCreateJobSheetViewController.m in Sources */,
+				DB2F2DFE1D29FEF100D4C028 /* SMANRoster.m in Sources */,
+				DBE50CA11D306CB1006804E4 /* wildmatch.c in Sources */,
+				DB5FFC6F1D29D65B00CF58D8 /* main.m in Sources */,
+				DB5FFC6C1D29D65B00CF58D8 /* AppDelegate.m in Sources */,
+				DB48E92D1D2AEFDB006AEF95 /* SMANViewLogsSheetViewController.m in Sources */,
+				DB2F2E0B1D2A0CDA00D4C028 /* SMANJob.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB5FFC791D29D65B00CF58D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBE50CA51D32CE07006804E4 /* SMANJobTests.m in Sources */,
+				DB5FFC821D29D65B00CF58D8 /* smanTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB5FFC841D29D65B00CF58D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB5FFC8D1D29D65B00CF58D8 /* smanUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DB5FFC7F1D29D65B00CF58D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB5FFC661D29D65B00CF58D8 /* sman */;
+			targetProxy = DB5FFC7E1D29D65B00CF58D8 /* PBXContainerItemProxy */;
+		};
+		DB5FFC8A1D29D65B00CF58D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB5FFC661D29D65B00CF58D8 /* sman */;
+			targetProxy = DB5FFC891D29D65B00CF58D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DB5FFC751D29D65B00CF58D8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DB5FFC761D29D65B00CF58D8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DB5FFC8F1D29D65B00CF58D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DB5FFC901D29D65B00CF58D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DB5FFC921D29D65B00CF58D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = sman/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rogerhub.sman;
+				PRODUCT_MODULE_NAME = SMAN;
+				PRODUCT_NAME = "Super Mega Awesome NYAN";
+			};
+			name = Debug;
+		};
+		DB5FFC931D29D65B00CF58D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = sman/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rogerhub.sman;
+				PRODUCT_MODULE_NAME = SMAN;
+				PRODUCT_NAME = "Super Mega Awesome NYAN";
+			};
+			name = Release;
+		};
+		DB5FFC951D29D65B00CF58D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = smanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rogerhub.smanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Super Mega Awesome NYAN.app/Contents/MacOS/Super Mega Awesome NYAN";
+			};
+			name = Debug;
+		};
+		DB5FFC961D29D65B00CF58D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = smanTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rogerhub.smanTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Super Mega Awesome NYAN.app/Contents/MacOS/Super Mega Awesome NYAN";
+			};
+			name = Release;
+		};
+		DB5FFC981D29D65B00CF58D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = smanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rogerhub.smanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = sman;
+			};
+			name = Debug;
+		};
+		DB5FFC991D29D65B00CF58D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = smanUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rogerhub.smanUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = sman;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DB5FFC621D29D65B00CF58D8 /* Build configuration list for PBXProject "sman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB5FFC8F1D29D65B00CF58D8 /* Debug */,
+				DB5FFC901D29D65B00CF58D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB5FFC911D29D65B00CF58D8 /* Build configuration list for PBXNativeTarget "sman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB5FFC921D29D65B00CF58D8 /* Debug */,
+				DB5FFC931D29D65B00CF58D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB5FFC941D29D65B00CF58D8 /* Build configuration list for PBXNativeTarget "smanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB5FFC951D29D65B00CF58D8 /* Debug */,
+				DB5FFC961D29D65B00CF58D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DB5FFC971D29D65B00CF58D8 /* Build configuration list for PBXNativeTarget "smanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB5FFC981D29D65B00CF58D8 /* Debug */,
+				DB5FFC991D29D65B00CF58D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DB5FFC5F1D29D65B00CF58D8 /* Project object */;
+}
