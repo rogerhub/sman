@@ -523,7 +523,7 @@ static void fsevent_callback(ConstFSEventStreamRef streamRef, void *clientCallBa
 }
 
 - (NSArray *)rsyncOptionsForPath:(NSString *)path {
-    NSMutableArray *options = [NSMutableArray arrayWithObjects:@"--itemize-changes", @"--compress", @"--human-readable", @"--recursive", @"--links", @"--progress", @"--no-times", @"--perms", @"--no-owner", @"--no-group", nil];
+    NSMutableArray *options = [NSMutableArray arrayWithObjects:@"--itemize-changes", @"--compress", @"--human-readable", @"--recursive", @"--links", @"--progress", @"--times", @"--perms", @"--no-owner", @"--no-group", nil];
     if (self.shouldDelete) {
         [options addObject:@"--delete"];
     }
