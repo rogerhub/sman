@@ -22,6 +22,10 @@
 
 - (void)removeJob:(SMANJob *)job;
 
+- (void)lockSync;
+
+- (void)unlockSync;
+
 - (void)saveRosterToPreferences;
 
 - (void)loadRosterFromPreferences;

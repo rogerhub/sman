@@ -68,6 +68,18 @@ static const uintptr_t SMANJobUpdated = 1;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"JobRemoved" object:self userInfo:@{@"Job": job}];
 }
 
+- (void)lockSync {
+    for (SMANJob *job in [self jobs]) {
+        [job lockSync];
+    }
+}
+
+- (void)unlockSync {
+    for (SMANJob *job in [self jobs]) {
+        [job unlockSync];
+    }
+}
+
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
     return [self countJobs];
 }

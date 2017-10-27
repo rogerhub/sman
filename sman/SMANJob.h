@@ -54,6 +54,10 @@
  */
 - (void)requestSyncForFile:(NSString *)path;
 
+- (void)lockSync;
+
+- (void)unlockSync;
+
 /*!
  * @returns A serialization of the parameters used to construct this job.
  */

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -364,7 +363,22 @@
                                         </connections>
                                     </button>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="5D60BE00-0AC3-454C-9B94-D79A3278C704" label="" paletteLabel="Preferences" image="NSActionTemplate" id="fqs-Ly-ZW0">
+                                <toolbarItem implicitItemIdentifier="5ABE6F30-2032-4DB8-92F8-1817575DCF21" label="Toggle Lock" paletteLabel="Toggle Lock" toolTip="Pause all sync jobs" image="NSLockUnlockedTemplate" id="B4A-ia-PK1">
+                                    <size key="minSize" width="36" height="25"/>
+                                    <size key="maxSize" width="36" height="25"/>
+                                    <button key="view" verticalHuggingPriority="750" id="KHu-nC-1fR">
+                                        <rect key="frame" x="18" y="14" width="36" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSLockUnlockedTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nso-6j-xbb">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toggleLock:" target="B8D-0N-5wS" id="hT2-Zs-IMP"/>
+                                        </connections>
+                                    </button>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="5D60BE00-0AC3-454C-9B94-D79A3278C704" label="Preferences" paletteLabel="Preferences" toolTip="Application settings and job defaults" image="NSActionTemplate" id="fqs-Ly-ZW0">
                                     <size key="minSize" width="36" height="25"/>
                                     <size key="maxSize" width="36" height="25"/>
                                     <button key="view" verticalHuggingPriority="750" id="Fiz-Rf-gNC">
@@ -374,20 +388,24 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="openPreferences:" target="B8D-0N-5wS" id="k7Q-hx-au3"/>
+                                        </connections>
                                     </button>
-                                    <connections>
-                                        <action selector="openPreferences:" target="B8D-0N-5wS" id="sEU-5D-AVU"/>
-                                    </connections>
                                 </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="Sle-eL-oqX"/>
                                 <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="dl1-T9-D8x"/>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="zBM-9s-H2g"/>
+                                <toolbarItem reference="B4A-ia-PK1"/>
                                 <toolbarItem reference="dl1-T9-D8x"/>
                                 <toolbarItem reference="fqs-Ly-ZW0"/>
                             </defaultToolbarItems>
                         </toolbar>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="GWh-6v-1rw"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -435,7 +453,7 @@
                                                             <rect key="frame" x="1" y="1" width="110" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GcM-Vm-sKq">
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="GcM-Vm-sKq">
                                                                     <rect key="frame" x="0.0" y="0.0" width="112" height="17"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="LRe-GI-XBF">
                                                                         <font key="font" metaFont="system"/>
@@ -472,7 +490,7 @@
                                                             <rect key="frame" x="114" y="1" width="80" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pb1-Wa-lnk">
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="pb1-Wa-lnk">
                                                                     <rect key="frame" x="0.0" y="0.0" width="82" height="17"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="5tU-gR-g1W">
                                                                         <font key="font" metaFont="system"/>
@@ -509,7 +527,7 @@
                                                             <rect key="frame" x="197" y="1" width="110" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejo-Hs-OQe">
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ejo-Hs-OQe">
                                                                     <rect key="frame" x="0.0" y="0.0" width="112" height="17"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="lf4-7Z-yS9">
                                                                         <font key="font" metaFont="system"/>
@@ -546,7 +564,7 @@
                                                             <rect key="frame" x="310" y="1" width="216" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTN-Re-5k5">
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="KTN-Re-5k5">
                                                                     <rect key="frame" x="0.0" y="0.0" width="218" height="17"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="N0B-Ku-111">
                                                                         <font key="font" metaFont="system"/>
@@ -618,7 +636,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="520" height="293"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qh-kc-LEf">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6qh-kc-LEf">
                                 <rect key="frame" x="6" y="262" width="196" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Application preferences" id="SvN-QB-6iI">
                                     <font key="font" metaFont="system" size="18"/>
@@ -650,7 +668,7 @@
                                     </binding>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5D2-aF-LOe">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5D2-aF-LOe">
                                 <rect key="frame" x="6" y="210" width="161" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Default job settings" id="PjP-e6-Jrx">
                                     <font key="font" metaFont="system" size="18"/>
@@ -669,7 +687,7 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="7uB-Fn-AQ4">
-                                <rect key="frame" x="6" y="146" width="425" height="18"/>
+                                <rect key="frame" x="6" y="146" width="426" height="18"/>
                                 <buttonCell key="cell" type="check" title="Compare checksum of files (not just modification time and filesize)" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="imd-AX-Yat">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -678,7 +696,7 @@
                                     <binding destination="Hpa-UI-8lk" name="value" keyPath="values.DefaultShouldCompareChecksum" id="GVk-yl-8fS"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqe-eY-RwC">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lqe-eY-RwC">
                                 <rect key="frame" x="6" y="123" width="88" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Excluded files" id="e2d-FU-BWk">
                                     <font key="font" metaFont="system"/>
@@ -686,7 +704,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sF-95-ifo">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2sF-95-ifo">
                                 <rect key="frame" x="6" y="91" width="109" height="28"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="One pattern per line Hint: &quot;man rsync&quot;" id="ZYl-AI-vkN">
                                     <font key="font" metaFont="smallSystem"/>
@@ -694,7 +712,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qW-od-D64">
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="4qW-od-D64">
                                 <rect key="frame" x="127" y="40" width="385" height="100"/>
                                 <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Wiu-s4-H44">
                                     <font key="font" metaFont="system"/>
@@ -771,7 +789,7 @@
                                     <rect key="frame" x="1" y="1" width="432" height="252"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView editable="NO" importsGraphics="NO" richText="NO" findStyle="panel" continuousSpellChecking="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="V6g-sW-Yk0">
+                                        <textView editable="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="panel" continuousSpellChecking="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="V6g-sW-Yk0">
                                             <rect key="frame" x="0.0" y="0.0" width="432" height="252"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -827,7 +845,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="520" height="402"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-ax-PoT">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-ax-PoT">
                                 <rect key="frame" x="6" y="376" width="79" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="1. Source" id="eQ3-Fj-ZXT">
                                     <font key="font" metaFont="system" size="18"/>
@@ -835,7 +853,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ept-eH-8mP">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ept-eH-8mP">
                                 <rect key="frame" x="6" y="303" width="116" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="2. Destination" id="wAl-aB-jIg">
                                     <font key="font" metaFont="system" size="18"/>
@@ -843,7 +861,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJh-Bk-AGq">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WJh-Bk-AGq">
                                 <rect key="frame" x="6" y="213" width="129" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="3. Sync options" id="9f7-ht-dHV">
                                     <font key="font" metaFont="system" size="18"/>
@@ -851,7 +869,7 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DjX-lY-lDZ">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DjX-lY-lDZ">
                                 <rect key="frame" x="6" y="269" width="408" height="34"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" id="Hpi-jf-Vyc">
                                     <font key="font" metaFont="system"/>
@@ -861,7 +879,7 @@ Files in the source directory will be synced to the remote directory.</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llM-Ip-c2K">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="llM-Ip-c2K">
                                 <rect key="frame" x="8" y="333" width="423" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="Type a path" drawsBackground="YES" usesSingleLineMode="YES" id="SeT-27-dev">
                                     <font key="font" metaFont="system"/>
@@ -875,7 +893,7 @@ Files in the source directory will be synced to the remote directory.</string>
                                     <outlet property="delegate" destination="9NE-Zt-qFU" id="Lsb-J9-H6d"/>
                                 </connections>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdy-nh-mlU">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="bdy-nh-mlU">
                                 <rect key="frame" x="8" y="243" width="180" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="JDK-Ty-Fsg"/>
@@ -889,7 +907,7 @@ Files in the source directory will be synced to the remote directory.</string>
                                     <action selector="performClick:" target="BnB-rz-6Tb" id="nv0-6h-2QG"/>
                                 </connections>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joo-3D-EAE">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="joo-3D-EAE">
                                 <rect key="frame" x="200" y="243" width="312" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" placeholderString="Remote directory path" drawsBackground="YES" usesSingleLineMode="YES" id="eJb-DV-LDd">
                                     <font key="font" metaFont="system"/>
@@ -910,7 +928,7 @@ Files in the source directory will be synced to the remote directory.</string>
                                     <action selector="submitJob:" target="9NE-Zt-qFU" id="qFm-To-Mh3"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZT-TS-aXt">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HZT-TS-aXt">
                                 <rect key="frame" x="6" y="359" width="212" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Pick a directory on your computer." id="mZd-a5-NHB">
                                     <font key="font" metaFont="system"/>
@@ -935,7 +953,7 @@ Files in the source directory will be synced to the remote directory.</string>
                                     <action selector="browseSource:" target="9NE-Zt-qFU" id="26I-ka-DzW"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Veb-3l-4Gb">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Veb-3l-4Gb">
                                 <rect key="frame" x="6" y="126" width="88" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Excluded files" id="EtD-il-IYO">
                                     <font key="font" metaFont="system"/>
@@ -943,7 +961,7 @@ Files in the source directory will be synced to the remote directory.</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wai-Yk-8i1">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Wai-Yk-8i1">
                                 <rect key="frame" x="6" y="94" width="109" height="28"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="One pattern per line Hint: &quot;man rsync&quot;" id="70f-gY-yjP">
                                     <font key="font" metaFont="smallSystem"/>
@@ -951,7 +969,7 @@ Files in the source directory will be synced to the remote directory.</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhS-gT-SLI">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zhS-gT-SLI">
                                 <rect key="frame" x="127" y="43" width="385" height="100"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="HA9-2O-Xp6">
                                     <font key="font" metaFont="system"/>
@@ -970,13 +988,13 @@ Files in the source directory will be synced to the remote directory.</string>
                                 </buttonCell>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="9Ag-fv-bLB">
-                                <rect key="frame" x="6" y="149" width="425" height="18"/>
+                                <rect key="frame" x="6" y="149" width="426" height="18"/>
                                 <buttonCell key="cell" type="check" title="Compare checksum of files (not just modification time and filesize)" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="lCw-qT-fYi">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNI-af-sns">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FNI-af-sns">
                                 <rect key="frame" x="190" y="246" width="8" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=":" id="MBH-vD-k2k">
                                     <font key="font" metaFont="system"/>
@@ -984,7 +1002,7 @@ Files in the source directory will be synced to the remote directory.</string>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="as2-0H-af6">
+                            <textField horizontalHuggingPriority="249" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="as2-0H-af6">
                                 <rect key="frame" x="5" y="13" width="409" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" id="16G-4C-6Nj">
                                     <font key="font" metaFont="system"/>
@@ -1060,5 +1078,6 @@ Files in the source directory will be synced to the remote directory.</string>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSLockUnlockedTemplate" width="10" height="14"/>
     </resources>
 </document>

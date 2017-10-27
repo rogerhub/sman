@@ -15,11 +15,23 @@
 
 @interface SMANWindowController ()
 
+@property BOOL syncIsLocked;
+
 - (SMANRoster *)roster;
 
 @end
 
 @implementation SMANWindowController
+
+- (id)init {
+    self = [super init];
+
+    if (self != nil) {
+        _syncIsLocked = false;
+    }
+
+    return self;
+}
 
 - (void)windowDidLoad {
     [super windowDidLoad];
@@ -32,6 +44,20 @@
     SMANCreateJobSheetViewController *sheetController = [self.storyboard instantiateControllerWithIdentifier:@"CreateJobSheet"];
     sheetController.delegate = appDelegate;
     [self.window.contentViewController presentViewControllerAsSheet:sheetController];
+}
+
+- (IBAction)toggleLock:(id)sender {
+    NSButton *button = (NSButton*) sender;
+    NSImage *image;
+    if (self.syncIsLocked) {
+        image = [NSImage imageNamed:NSImageNameLockUnlockedTemplate];
+        [[self roster] unlockSync];
+    } else {
+        image = [NSImage imageNamed:NSImageNameLockLockedTemplate];
+        [[self roster] lockSync];
+    }
+    self.syncIsLocked = !self.syncIsLocked;
+    [button setImage: image];
 }
 
 - (IBAction)openPreferences:(id)sender {

@@ -82,6 +82,8 @@
 
 @property BOOL syncIsRunning;
 
+@property BOOL syncIsLocked;
+
 @property BOOL shouldSyncAgain;
 
 @property NSString *filePathIfSyncingAgain;
@@ -271,7 +273,7 @@ static void fsevent_callback(ConstFSEventStreamRef streamRef, void *clientCallBa
         [NSException raise:NSInternalInconsistencyException format:@"This task has not yet been attached"];
     }
 
-    if (self.syncIsRunning) {
+    if (self.syncIsRunning || self.syncIsLocked) {
         if (self.shouldSyncAgain) {
             if (self.filePathIfSyncingAgain != nil && (path == nil || ![path isEqualToString:self.filePathIfSyncingAgain])) {
                 // Broaden the request to sync everything
@@ -280,6 +282,9 @@ static void fsevent_callback(ConstFSEventStreamRef streamRef, void *clientCallBa
         } else {
             self.shouldSyncAgain = YES;
             self.filePathIfSyncingAgain = path;
+        }
+        if (!self.syncIsRunning) {
+            self.status = @"Waiting for sync unlock...";
         }
         return;
     }
@@ -325,6 +330,21 @@ static void fsevent_callback(ConstFSEventStreamRef streamRef, void *clientCallBa
     [outputFileHandle readInBackgroundAndNotify];
 
     [self.syncTask launch];
+}
+
+- (void)lockSync {
+    self.syncIsLocked = YES;
+}
+
+- (void)unlockSync {
+    if (!self.syncIsLocked) {
+        return;
+    }
+    self.syncIsLocked = NO;
+    if (self.shouldSyncAgain) {
+        self.shouldSyncAgain = NO;
+        [self requestSyncForFile:self.filePathIfSyncingAgain];
+    }
 }
 
 - (BOOL)pathIsExcluded:(NSString *const)path isDirectory:(BOOL)pathIsDirectory {
@@ -474,7 +494,7 @@ static void fsevent_callback(ConstFSEventStreamRef streamRef, void *clientCallBa
 
     self.syncTask = nil;
     self.syncIsRunning = NO;
-    if (self.shouldSyncAgain) {
+    if (!self.syncIsLocked && self.shouldSyncAgain) {
         self.shouldSyncAgain = NO;
         [self requestSyncForFile:self.filePathIfSyncingAgain];
     }
@@ -523,7 +543,7 @@ static void fsevent_callback(ConstFSEventStreamRef streamRef, void *clientCallBa
 }
 
 - (NSArray *)rsyncOptionsForPath:(NSString *)path {
-    NSMutableArray *options = [NSMutableArray arrayWithObjects:@"--itemize-changes", @"--compress", @"--human-readable", @"--recursive", @"--links", @"--progress", @"--times", @"--perms", @"--no-owner", @"--no-group", nil];
+    NSMutableArray *options = [NSMutableArray arrayWithObjects:@"--itemize-changes", @"--human-readable", @"--recursive", @"--links", @"--progress", @"--times", @"--perms", @"--no-owner", @"--no-group", nil];
     if (self.shouldDelete) {
         [options addObject:@"--delete"];
     }
